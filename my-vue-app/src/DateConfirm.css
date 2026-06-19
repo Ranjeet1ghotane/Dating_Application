@@ -1,0 +1,111 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #ff6fa5,
+    #f48fb1
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  width: 700px;
+  max-width: 95%;
+
+  padding: 50px;
+
+  text-align: center;
+
+  border-radius: 30px;
+
+  background: rgba(255,255,255,0.15);
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.1);
+
+  color: white;
+
+  animation: pop 0.6s ease;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.success {
+  font-size: 80px;
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 15px;
+}
+
+.subtitle {
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item {
+  background: rgba(255,255,255,0.2);
+
+  padding: 18px;
+
+  border-radius: 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item strong {
+  font-size: 1.1rem;
+}
+
+.message {
+  margin-top: 35px;
+
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.hearts {
+  margin-top: 25px;
+  font-size: 2rem;
+
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    transform: scale(1.15);
+  }
+}

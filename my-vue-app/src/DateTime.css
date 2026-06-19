@@ -1,0 +1,86 @@
+.container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff6fa5, #f48fb1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card {
+    width: 700px;
+    max-width: 95%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 50px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.heart {
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.input-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+input {
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.confirm-btn {
+    margin-top: 20px;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    color: #ff4081;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.confirm-btn:hover {
+    transform: translateY(-3px);
+}
+
+.confirm-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+.selected-place {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 12px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}

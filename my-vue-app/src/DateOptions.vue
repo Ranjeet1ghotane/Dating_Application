@@ -33,8 +33,8 @@
       </div>
 
       <div v-if="selectedPlace" class="message">
-        Awesome! :heart:<br /><br />
-        {{ selectedPlace }} it is! :tada:
+        Awesome! ❤️<br /><br />
+        {{ selectedPlace }} it is! 😊
       </div>
     </div>
   </div>
@@ -44,15 +44,9 @@
 export default {
   name: "DateOptions",
 
-  data() {
-    return {
-      selectedPlace: "",
-    };
-  },
-
   methods: {
     selectPlace(place) {
-      this.selectedPlace = place;
+      this.$emit("place-selected", place);
     },
   },
 };

@@ -75,4 +75,3 @@ export default {
 };
 </script>
 
-<style src="./Home.css"></style>
