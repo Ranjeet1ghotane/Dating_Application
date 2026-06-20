@@ -74,4 +74,5 @@ export default {
   },
 };
 </script>
+<style src="../styles/HomePage.css"></style>
 

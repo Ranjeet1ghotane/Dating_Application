@@ -49,4 +49,4 @@ defineProps({
 });
 </script>
 
-<style src="./DateConfirm.css"></style>
+<style src="../styles/DateConfirmationPage.css"></style>

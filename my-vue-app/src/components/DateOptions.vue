@@ -52,4 +52,4 @@ export default {
 };
 </script>
 
-<style src="./Home.css"></style>
+<style src="../styles/HomePage.css"></style>

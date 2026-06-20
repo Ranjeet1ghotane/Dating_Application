@@ -1,9 +1,9 @@
 <script setup>
 import { ref } from "vue";
-import HomePage from "./HomePage.vue";
-import DateOptions from "./DateOptions.vue";
-import DateTime from "./DateTime.vue";
-import DateConfirmationPage from "./DateConfirmationPage.vue";
+import HomePage from "././components/HomePage.vue";
+import DateOptions from "././components/DateOptions.vue";
+import DateTime from "././components/DateTime.vue";
+import DateConfirmationPage from "././components/DateConfirmationPage.vue";
 
 const currentPage = ref("home");
 

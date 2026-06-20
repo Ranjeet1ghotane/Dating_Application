@@ -69,4 +69,4 @@ const confirmDate = () => {
 };
 </script>
 
-<style src="./DateTime.css"></style>
+<style src="../styles/DateTime.css"></style>
