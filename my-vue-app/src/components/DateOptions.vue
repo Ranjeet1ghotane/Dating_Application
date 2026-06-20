@@ -52,4 +52,4 @@ export default {
 };
 </script>
 
-<style src="../styles/HomePage.css"></style>
+<style src="../styles/DateOptions.css"></style>
