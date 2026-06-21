@@ -1,8 +1,6 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* =========================
+   CONTAINER
+========================= */
 
 .container {
   width: 100vw;
@@ -12,81 +10,215 @@
   justify-content: center;
   align-items: center;
 
-  background: linear-gradient(
-    135deg,
-    #FF4E8B,
-    #FF7EB3,
-    #FFC2D1
-  );
+  font-family: "Inter", sans-serif;
 
-  font-family: "Poppins", sans-serif;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.15),
+      rgba(0, 0, 0, 0.15)
+    ),
+    url("../assets/BackGround.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
 }
+
+/* =========================
+   CARD
+========================= */
 
 .date-card {
   width: 700px;
-  min-height: 450px;
+  max-width: 90%;
 
-  padding: 40px;
+  min-height: 600px;
+
+  padding: 60px 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   text-align: center;
 
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.08);
 
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
   border-radius: 30px;
 
   box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.15),
-    0 0 20px rgba(255, 255, 255, 0.2);
+    0 20px 60px rgba(0, 0, 0, 0.25);
 }
+
+/* =========================
+   HEART
+========================= */
 
 .heart {
-  font-size: 4rem;
-  margin-bottom: 20px;
+  width: 90px;
+  height: 90px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 3.5rem;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.15);
+
+  margin-bottom: 25px;
+
+  animation: float 3s ease-in-out infinite;
 }
 
-h1 {
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.date-card h1 {
+  font-size: 4rem;
+  font-weight: 800;
+
   color: white;
-  font-size: 2.8rem;
-  margin-bottom: 15px;
+
+  margin-bottom: 20px;
+
+  line-height: 1.2;
 }
 
 .subtitle {
-  color: white;
-  font-size: 1.1rem;
-  margin-bottom: 40px;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+
+  margin-bottom: 45px;
 }
+
+/* =========================
+   OPTIONS
+========================= */
 
 .date-options {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-top: 30px;
+
+  gap: 18px;
+
+  width: 100%;
+
+  align-items: center;
 }
 
+/* =========================
+   BUTTONS
+========================= */
+
 .option-btn {
-  padding: 15px;
+  width: 340px;
+
+  padding: 18px 25px;
+
   border: none;
-  border-radius: 50px;
+  border-radius: 18px;
 
   font-size: 1.1rem;
   font-weight: 600;
 
   cursor: pointer;
 
-  background: white;
-  color: #FF4E8B;
+  color: white;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
 
   transition: all 0.3s ease;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .option-btn:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px) scale(1.03);
+
+  background: linear-gradient(
+    135deg,
+    #4f7cff,
+    #45d4c9
+  );
+
+  box-shadow:
+    0 15px 30px rgba(79, 124, 255, 0.4);
 }
 
+/* =========================
+   MESSAGE
+========================= */
+
 .message {
-  margin-top: 30px;
+  margin-top: 35px;
+
+  padding: 20px;
+
+  width: 80%;
+
   color: white;
-  font-size: 1.8rem;
-  font-weight: bold;
+
+  background: rgba(255, 255, 255, 0.12);
+
+  border-radius: 15px;
+
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .date-card {
+    width: 90%;
+    padding: 40px 25px;
+  }
+
+  .date-card h1 {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .option-btn {
+    width: 100%;
+  }
+
+  .heart {
+    width: 75px;
+    height: 75px;
+    font-size: 3rem;
+  }
 }

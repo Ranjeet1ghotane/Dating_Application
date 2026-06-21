@@ -3,7 +3,7 @@
     <div class="date-card">
       <div class="heart">❤️</div>
 
-      <h1>Will You Go On A Date With Me 😶‍🌫️</h1>
+      <h1>Will You Go On A Date With Me </h1>
 
       <p class="subtitle">
         I promise good food, great conversations, and lots of smiles 😊
@@ -34,7 +34,7 @@
   </div>
 </template>
 
-<script>
+<script >
 export default {
   name: "HomePage",
 
@@ -74,5 +74,5 @@ export default {
   },
 };
 </script>
-<style src="../styles/HomePage.css"></style>
+ <style src="../styles/HomePage.css"></style> 
 
