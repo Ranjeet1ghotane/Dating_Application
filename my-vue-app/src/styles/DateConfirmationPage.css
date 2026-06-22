@@ -183,29 +183,170 @@
    MOBILE
 ========================= */
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 768px) {
+
+  .container {
+    padding: 20px;
+  }
+
+  .date-card,
   .card {
+    width: 100%;
+    max-width: 100%;
+
     padding: 35px 20px;
+
+    border-radius: 25px;
   }
 
+  .date-card h1,
   .card h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
+    line-height: 1.2;
   }
 
-  .subtitle {
+  .subtitle,
+  .card p {
     font-size: 1rem;
+  }
+
+  .heart,
+  .success {
+    font-size: 3rem;
+  }
+
+  .option-btn,
+  .confirm-btn {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .input-group {
+    width: 100%;
+  }
+
+  .input-group input {
+    width: 100%;
+  }
+
+  .details {
+    width: 100%;
   }
 
   .item {
     flex-direction: column;
     gap: 8px;
+
+    text-align: center;
   }
 
   .message {
-    font-size: 1.1rem;
+    width: 100%;
+    font-size: 1rem;
   }
 
   .hearts {
     font-size: 1.5rem;
+    letter-spacing: 3px;
   }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .date-card,
+  .card {
+    padding: 25px 15px;
+  }
+
+  .date-card h1,
+  .card h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle,
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  .heart {
+    width: 70px;
+    height: 70px;
+
+    font-size: 2.5rem;
+  }
+
+  .success {
+    font-size: 3rem;
+  }
+
+  .option-btn,
+  .confirm-btn {
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  .selected-place {
+    font-size: 0.9rem;
+    padding: 12px 16px;
+  }
+
+  .message {
+    font-size: 0.95rem;
+    padding: 16px;
+  }
+
+  .item {
+    padding: 15px;
+  }
+
+  .item strong,
+  .item span {
+    font-size: 0.9rem;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .date-card,
+  .card {
+    width: 85%;
+  }
+
+  .date-card h1,
+  .card h1 {
+    font-size: 3.2rem;
+  }
+
+  .option-btn {
+    width: 300px;
+  }
+
+  .confirm-btn {
+    width: 280px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body,
+#app {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
