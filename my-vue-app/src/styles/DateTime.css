@@ -4,7 +4,7 @@
 
 .container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   justify-content: center;
@@ -12,13 +12,7 @@
 
   font-family: "Inter", sans-serif;
 
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.15),
-      rgba(0, 0, 0, 0.15)
-    ),
-    url("../assets/BackGround.png");
-
+  background: url("../assets/Flowers.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,33 +20,36 @@
   overflow: hidden;
 }
 
+/* Remove any overlays */
+.container::before,
+.container::after {
+  display: none;
+}
+
 /* =========================
    CARD
 ========================= */
 
 .card {
-  width: 700px;
+  width: 800px;
   max-width: 90%;
 
-  padding: 60px 50px;
+  padding: 0;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+
+  border: none !important;
+  box-shadow: none !important;
 
   text-align: center;
+}
 
-  background: rgba(255, 255, 255, 0.08);
-
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-
-  border: 1px solid rgba(255, 255, 255, 0.15);
-
-  border-radius: 30px;
-
-  box-shadow:
-    0 20px 60px rgba(0, 0, 0, 0.25);
+/* Remove any hidden glass layer */
+.card::before,
+.card::after {
+  display: none !important;
 }
 
 /* =========================
@@ -60,55 +57,39 @@
 ========================= */
 
 .heart {
-  width: 90px;
-  height: 90px;
+  font-size: 5rem;
+  margin-bottom: 20px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 3.5rem;
-
-  border-radius: 50%;
-
-  background: rgba(255, 255, 255, 0.15);
-
-  margin-bottom: 25px;
-
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%,100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
+  background: transparent;
 }
 
 /* =========================
-   HEADING
+   TITLE
 ========================= */
 
 .card h1 {
   color: white;
 
-  font-size: 4rem;
-  font-weight: 800;
+  font-size: 5rem;
+  font-weight: 900;
 
-  line-height: 1.2;
+  line-height: 1.1;
 
   margin-bottom: 20px;
+
+  text-shadow:
+    0 6px 20px rgba(0,0,0,0.35),
+    0 12px 30px rgba(0,0,0,0.25);
 }
 
 .card p {
-  color: rgba(255,255,255,0.9);
+  color: white;
 
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 
-  margin-bottom: 25px;
+  margin-bottom: 35px;
+
+  text-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
 /* =========================
@@ -116,77 +97,66 @@
 ========================= */
 
 .selected-place {
-  background: rgba(255,255,255,0.12);
-
-  border: 1px solid rgba(255,255,255,0.2);
-
-  padding: 14px 24px;
-
-  border-radius: 50px;
-
-  color: white;
-
-  font-weight: 600;
-
-  margin-bottom: 35px;
-}
-
-/* =========================
-   INPUT GROUP
-========================= */
-
-.input-group {
-  width: 100%;
-  max-width: 420px;
-
-  display: flex;
-  flex-direction: column;
-
+  display: inline-flex;
+  align-items: center;
   gap: 10px;
 
-  margin-bottom: 20px;
+  padding: 14px 28px;
 
-  text-align: left;
-}
+  background: rgba(44, 5, 128, 0.15);
 
-.input-group label {
+  border: 1px solid rgba(255,255,255,0.25);
+
+  border-radius: 999px;
+
   color: white;
 
-  font-size: 1rem;
-  font-weight: 600;
+  margin-bottom: 35px;
 }
 
 /* =========================
    INPUTS
 ========================= */
 
+.input-group {
+  width: 100%;
+  max-width: 400px;
+
+  margin: 0 auto 20px;
+
+  text-align: left;
+}
+
+.input-group label {
+  color: white;
+  font-weight: 700;
+
+  margin-bottom: 10px;
+
+  display: block;
+
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
 .input-group input {
   width: 100%;
 
-  padding: 15px 18px;
+  padding: 16px 20px;
 
-  border-radius: 15px;
+  border-radius: 16px;
 
-  border: 1px solid rgba(255,255,255,0.2);
+  border: none;
 
-  background: rgba(255,255,255,0.12);
-
-  backdrop-filter: blur(10px);
-
-  color: white;
+  background: rgba(255,255,255,0.95);
 
   font-size: 1rem;
 
   outline: none;
-
-  transition: 0.3s;
 }
 
 .input-group input:focus {
-  border-color: #45d4c9;
-
   box-shadow:
-    0 0 15px rgba(69,212,201,0.4);
+    0 0 20px rgba(255,105,180,0.3);
 }
 
 /* =========================
@@ -194,214 +164,34 @@
 ========================= */
 
 .confirm-btn {
-  margin-top: 20px;
-
-  width: 320px;
+  width: 300px;
 
   padding: 18px;
 
-  border: none;
-  border-radius: 18px;
+  margin-top: 20px;
 
-  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+
+  color: white;
 
   font-size: 1.1rem;
   font-weight: 700;
 
-  color: white;
+  cursor: pointer;
 
   background: linear-gradient(
     135deg,
-    #4f7cff,
-    #45d4c9
+    #ff5fa2,
+    #ff86b8
   );
 
-  transition: all 0.3s ease;
-
   box-shadow:
-    0 10px 25px rgba(79,124,255,0.35);
+    0 10px 25px rgba(255,95,162,0.35);
+
+  transition: 0.3s;
 }
 
-.confirm-btn:hover:not(:disabled) {
-  transform: translateY(-5px);
-
-  box-shadow:
-    0 15px 35px rgba(79,124,255,0.5);
-}
-
-.confirm-btn:disabled {
-  opacity: 0.5;
-
-  cursor: not-allowed;
-
-  transform: none;
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-
-@media (max-width: 768px) {
-
-  .container {
-    padding: 20px;
-  }
-
-  .date-card,
-  .card {
-    width: 100%;
-    max-width: 100%;
-
-    padding: 35px 20px;
-
-    border-radius: 25px;
-  }
-
-  .date-card h1,
-  .card h1 {
-    font-size: 2.5rem;
-    line-height: 1.2;
-  }
-
-  .subtitle,
-  .card p {
-    font-size: 1rem;
-  }
-
-  .heart,
-  .success {
-    font-size: 3rem;
-  }
-
-  .option-btn,
-  .confirm-btn {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .input-group {
-    width: 100%;
-  }
-
-  .input-group input {
-    width: 100%;
-  }
-
-  .details {
-    width: 100%;
-  }
-
-  .item {
-    flex-direction: column;
-    gap: 8px;
-
-    text-align: center;
-  }
-
-  .message {
-    width: 100%;
-    font-size: 1rem;
-  }
-
-  .hearts {
-    font-size: 1.5rem;
-    letter-spacing: 3px;
-  }
-}
-
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 480px) {
-
-  .date-card,
-  .card {
-    padding: 25px 15px;
-  }
-
-  .date-card h1,
-  .card h1 {
-    font-size: 2rem;
-  }
-
-  .subtitle,
-  .card p {
-    font-size: 0.95rem;
-  }
-
-  .heart {
-    width: 70px;
-    height: 70px;
-
-    font-size: 2.5rem;
-  }
-
-  .success {
-    font-size: 3rem;
-  }
-
-  .option-btn,
-  .confirm-btn {
-    padding: 14px;
-    font-size: 1rem;
-  }
-
-  .selected-place {
-    font-size: 0.9rem;
-    padding: 12px 16px;
-  }
-
-  .message {
-    font-size: 0.95rem;
-    padding: 16px;
-  }
-
-  .item {
-    padding: 15px;
-  }
-
-  .item strong,
-  .item span {
-    font-size: 0.9rem;
-  }
-}
-
-/* =========================
-   TABLET
-========================= */
-
-@media (min-width: 769px) and (max-width: 1024px) {
-
-  .date-card,
-  .card {
-    width: 85%;
-  }
-
-  .date-card h1,
-  .card h1 {
-    font-size: 3.2rem;
-  }
-
-  .option-btn {
-    width: 300px;
-  }
-
-  .confirm-btn {
-    width: 280px;
-  }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-html,
-body,
-#app {
-  width: 100%;
-  min-height: 100vh;
-  overflow-x: hidden;
+.confirm-btn:hover {
+  transform: translateY(-4px);
 }
